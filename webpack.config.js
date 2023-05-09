@@ -1,4 +1,6 @@
 const ESLintPlugin = require('eslint-webpack-plugin');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'inline-source-map', // use the option source-map for production
@@ -34,6 +36,9 @@ module.exports = {
         extends: ['eslint:recommended', 'plugin:react/recommended'],
         rules: {},
       },
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve('./index.html'),
     }),
   ],
 };
