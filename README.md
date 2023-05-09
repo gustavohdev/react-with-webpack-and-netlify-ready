@@ -3,3 +3,4 @@
 - Babel 7
 - Webpack 5
 - ESLint 8
+- Netlify Ready
